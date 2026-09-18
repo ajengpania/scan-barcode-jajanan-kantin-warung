@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    color: #222;
+}
+
+.app {
+    max-width: 600px;
+    margin: auto;
+    min-height: 100vh;
+    background: #fff;
+}
+
+header {
+    background: #168a45;
+    color: white;
+    padding: 22px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+main {
+    padding: 15px;
+}
+
+section {
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 18px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#reader {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+/* Tombol */
+
+button {
+    border: none;
+    border-radius: 9px;
+    padding: 12px 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#startScan {
+    width: 100%;
+    background: #168a45;
+    color: white;
+    font-weight: bold;
+}
+
+.manual {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.manual input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+    font-size: 15px;
+}
+
+.manual button {
+    background: #333;
+    color: white;
+}
+
+#scanStatus {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Produk */
+
+.produk-info {
+    background: #f5f7f8;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 80px;
+}
+
+.nama-produk {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.harga-produk {
+    color: #168a45;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-tambah {
+    width: 100%;
+    margin-top: 12px;
+    background: #168a45;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-tambah:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+/* Keranjang */
+
+.keranjang-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-reset {
+    background: #ffe5e5;
+    color: #d00;
+    font-size: 13px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-price {
+    color: #777;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: #168a45;
+    color: white;
+    font-weight: bold;
+}
+
+.kosong {
+    color: #888;
+    text-align: center;
+    padding: 15px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 18px 0;
+    margin-top: 5px;
+    border-top: 2px solid #eee;
+}
+
+.total strong {
+    color: #168a45;
+}
+
+.btn-bayar {
+    width: 100%;
+    background: #168a45;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    padding: 20px;
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .item {
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasir Kantin</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Library scanner barcode -->
+    <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+
+<div class="app">
+
+    <header>
+        <h1>🏪 KantinKu</h1>
+        <p>Scan jajanan & hitung belanja</p>
+    </header>
+
+    <main>
+
+        <section class="scanner-card">
+            <h2>📷 Scan Barcode</h2>
+
+            <div id="reader"></div>
+
+            <button id="startScan" onclick="mulaiScan()">
+                Mulai Scan
+            </button>
+
+            <div class="manual">
+                <input
+                    type="text"
+                    id="barcodeInput"
+                    placeholder="Masukkan barcode..."
+                >
+                <button onclick="cariBarcode()">Cari</button>
+            </div>
+
+            <p id="scanStatus"></p>
+        </section>
+
+        <section class="produk-card">
+            <h2>🛍️ Produk</h2>
+
+            <div id="produkInfo" class="produk-info">
+                <p>Belum ada produk dipilih.</p>
+            </div>
+
+            <button
+                id="tambahButton"
+                class="btn-tambah"
+                onclick="tambahKeranjang()"
+                disabled
+            >
+                + Tambah ke Keranjang
+            </button>
+        </section>
+
+        <section class="keranjang-card">
+            <div class="keranjang-header">
+                <h2>🛒 Keranjang</h2>
+                <button onclick="kosongkanKeranjang()" class="btn-reset">
+                    Kosongkan
+                </button>
+            </div>
+
+            <div id="keranjang">
+                <p class="kosong">Keranjang masih kosong.</p>
+            </div>
+
+            <div class="total">
+                <span>Total</span>
+                <strong id="totalHarga">Rp0</strong>
+            </div>
+
+            <button onclick="bayar()" class="btn-bayar">
+                💵 Bayar
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        KantinKu • Kasir sederhana untuk warung/kantin
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
